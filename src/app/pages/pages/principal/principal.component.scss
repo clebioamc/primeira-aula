@@ -1,0 +1,25 @@
+$container-padding: 20px; // Example variable for container padding
+
+.header {
+  // Styles for header if needed
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    
+    .container {
+      padding: $container-padding; // Use variable for consistent padding
+  
+      // Optional: Add any additional styles for container if needed
+      &:first-child {
+        // Styles specific to the first container (if needed)
+      }
+  
+      &:last-child {
+        // Styles specific to the last container (if needed)
+      }
+    }
+  }
+  

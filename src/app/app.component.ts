@@ -8,12 +8,14 @@ import { MainComponent } from './components/main/main.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, AsideComponent, AsideComponent, MainComponent],
+  imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'primeira-aula';
+
+
 
 
 }
