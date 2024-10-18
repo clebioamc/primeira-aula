@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Requisicao } from '../../models/RequisicaoModel';
 
 
 @Component({
@@ -11,10 +12,19 @@ import { FormsModule } from '@angular/forms';
 })
 export class FormularioComponent {
 
-  @Output() banda = new EventEmitter<string>();
+  banda: string = '';
+  musica: string = '';
+
+  mensagem: Requisicao ={
+    banda: '',
+    musica: ''
+  }
+  @Output() emissor = new EventEmitter<Requisicao>();
 
   selecionarBanda(){
-    this.emissor.emit(this.banda);
+    this.mensagem.banda = this.banda;
+    this.mensagem.musica = this.musica;
+    this.emissor.emit(this.mensagem);
   }
 
 }
